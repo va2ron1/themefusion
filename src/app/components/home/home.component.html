@@ -1,0 +1,101 @@
+<header class="content-height">
+  <div class="container h-100 text-center">
+    <div class="row h-100">
+      <div class="col-6 my-auto">
+        <img src="../../../assets/logo.png" class="img-fluid">
+      </div>
+      <div class="col-6 my-auto">
+        <div class="col-10 float-right">
+          <button class="btn btn-lg btn-block btn-light" (click)="clickButton(content)">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="footer-height">
+  <div class="container h-100 p-5">
+    <div class="row h-100">
+      <div class="col-12 my-auto">
+        <h2 class="text-center">
+          iPhone
+        </h2>
+      </div>
+     <div class="col-4 my-auto">
+       <ons-list modifier="inset">
+         <ons-list-item modifier="longdivider">Size 60
+           <div class="right">
+             <ons-switch [(value)]="sizes.s60.enabled"></ons-switch>
+           </div>
+         </ons-list-item>
+       </ons-list>
+     </div>
+      <div class="col-4 my-auto">
+        <ons-list modifier="inset">
+          <ons-list-item modifier="longdivider">Size 120
+            <div class="right">
+              <ons-switch [(value)]="sizes.s120.enabled"></ons-switch>
+            </div>
+          </ons-list-item>
+        </ons-list>
+      </div>
+      <div class="col-4 my-auto">
+        <ons-list modifier="inset">
+          <ons-list-item modifier="longdivider">Size 180
+            <div class="right">
+              <ons-switch [(value)]="sizes.s180.enabled"></ons-switch>
+            </div>
+          </ons-list-item>
+        </ons-list>
+      </div>
+      <div class="col-12 my-auto">
+        <h2 class="text-center">
+          iPad
+        </h2>
+      </div>
+      <div class="col-6 my-auto">
+        <ons-list modifier="inset">
+          <ons-list-item modifier="longdivider">Size 76
+            <div class="right">
+              <ons-switch [(value)]="sizes.s76.enabled"></ons-switch>
+            </div>
+          </ons-list-item>
+        </ons-list>
+      </div>
+      <div class="col-6 my-auto">
+        <ons-list modifier="inset">
+          <ons-list-item modifier="longdivider">Size 152
+            <div class="right">
+              <ons-switch [(value)]="sizes.s152.enabled"></ons-switch>
+            </div>
+          </ons-list-item>
+        </ons-list>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="container" style="height: 10vh;">
+    <div class="row" style="height: 10vh;">
+      <div class="col-12 my-auto text-center">
+        Theme Fusion
+      </div>
+    </div>
+  </div>
+  <div class="container" style="height: 20vh; background-color: #b21f2d">
+    <div class="row" style="height: 20vh;">
+      <div class="col-12 my-auto text-center">
+        <button class="btn btn-light btn-block" [disabled]="!pickIconsFolderEnabled" (click)="pickFolder(0)">Pick Icons Folder</button>
+        <button class="btn btn-light btn-block" [disabled]="!pickDestinationFolderEnabled" (click)="pickFolder(1)">Pick Destination Folder</button>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="height: 10vh;">
+    <div class="row" style="height: 10vh;">
+      <div class="col-12 my-auto text-center">
+        <button class="btn btn-dark btn-block" [disabled]="convertButtonIsDisabled()" (click)="convert()">Convert</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
