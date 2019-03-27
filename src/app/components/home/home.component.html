@@ -2,7 +2,7 @@
   <div class="container h-100 text-center">
     <div class="row h-100">
       <div class="col-6 my-auto">
-        <img src="../../../assets/logo.png" class="img-fluid">
+        <img src="assets/logo.png" class="img-fluid">
       </div>
       <div class="col-6 my-auto">
         <div class="col-10 float-right">
@@ -53,7 +53,7 @@
           iPad
         </h2>
       </div>
-      <div class="col-6 my-auto">
+      <div class="col-4 my-auto">
         <ons-list modifier="inset">
           <ons-list-item modifier="longdivider">Size 76
             <div class="right">
@@ -62,11 +62,20 @@
           </ons-list-item>
         </ons-list>
       </div>
-      <div class="col-6 my-auto">
+      <div class="col-4 my-auto">
         <ons-list modifier="inset">
           <ons-list-item modifier="longdivider">Size 152
             <div class="right">
               <ons-switch [(value)]="sizes.s152.enabled"></ons-switch>
+            </div>
+          </ons-list-item>
+        </ons-list>
+      </div>
+      <div class="col-4 my-auto">
+        <ons-list modifier="inset">
+          <ons-list-item modifier="longdivider">Size 400
+            <div class="right">
+              <ons-switch [(value)]="sizes.s400.enabled"></ons-switch>
             </div>
           </ons-list-item>
         </ons-list>

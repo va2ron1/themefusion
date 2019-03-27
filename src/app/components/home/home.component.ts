@@ -77,6 +77,12 @@ export class HomeComponent implements OnInit {
       size: 152,
       isPad: true,
       enabled: true
+    },
+    s400: {
+      prefix: '',
+      size: 400,
+      isPad: true,
+      enabled: false
     }
   };
 
